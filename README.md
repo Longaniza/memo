@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Proyecto programación con React Equipo 7 - Memorama
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Planteamiento del proyecto
+Nuestro proyecto es un memorama que sera para dos jugadores. Planes a futuro es el contar con una especie de sistema de estadisticas montado en un servidor del cual es puedan hacer peticiones y que estas sean representadas de forma grafica en el navegador. Por ahora, hicimos la estructura basica de lo que seran los futuros componentes.
 
-## Available Scripts
+## Componentes y funciones helpers
 
-In the project directory, you can run:
+### App
+![](https://raw.githubusercontent.com/alejandro28100/memo/main/src/readmeimages/app.jpg)
 
-### `npm start`
+En el App.js se renderizan las tarjetas desde el array cards,estas tarjetas son hijos de Board para que se les aplique el estilo.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Board
+![](https://raw.githubusercontent.com/alejandro28100/memo/main/src/readmeimages/board.jpg)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Board component que recibe hijos, es para poder estilizar el tablero.
 
-### `npm test`
+### Card
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![](https://raw.githubusercontent.com/alejandro28100/memo/main/src/readmeimages/card.jpg)
 
-### `npm run build`
+Componente card que representa cada tarjeta, recibe por props la url de una imagen, una id única, la propiedad flipped (si esta volteada la tarjeta el valor es true ) y la funcion handleSelectCard para cambiar la propiedad flipped desde el estado que viene de App.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Funciones helpers
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![](https://raw.githubusercontent.com/alejandro28100/memo/main/src/readmeimages/helpers.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El array cards es generado en varios pasos. Primero se inicia con un array de url de las imagenes del juego (en este caso son 6 urls). Despues duplico el contenido del array para obtener 12 url (para que haya 2 imagenes por url). Luego, transformo cada entrada ( la url que es un string) en un objeto con las propiedades que se van a usar (url, id y flipped). Despues en el array resultante del paso anterior se busca el id del par correspondiente de cada imagen.Como las imagenes mantienen el mismo orden aun cuando son duplicadas en el segundo paso, solo hay que saber el numero total de imagenes originales (6) para saber si la tarjeta es parte del grupo original o no. Si el index es menor que 5 quiere decir que pertenece al grupo original así que si le sumamos la cantidad total 6 nos llevará al objeto correspondiente en el segundo grupo.Después solo se le asigna la prop pairID con valor del id del par que le corresponde
