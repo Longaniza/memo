@@ -1,8 +1,8 @@
 import { Fragment, useEffect, useState } from 'react';
 import './App.css';
-import Board from "./components/Board";
-import Card from "./components/Card";
-import Form from "./components/Form";
+import Board from "./Board";
+import Card from "./Card";
+import Form from "./Form";
 import { v4 as uuid } from "uuid";
 
 
@@ -23,7 +23,7 @@ const users = [
 ]
 
 
-function App() {
+function App2() {
 
   const [turn, setTurn] = useState();
   const [players, setPlayers] = useState(users);
@@ -158,4 +158,4 @@ function App() {
   );
 }
 
-export default App;
+export default App2;
