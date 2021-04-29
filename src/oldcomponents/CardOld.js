@@ -1,8 +1,7 @@
 import React from 'react'
-import "../styles/card.css";
 import PropTypes from "prop-types";
 
-const Card = ({ imageUrl, id, flipped, handleSelectCard, pairID, founded }) => {
+const CardOld = ({ imageUrl, id, flipped, handleSelectCard, pairID, founded }) => {
     return (
         <div onClick={() => handleSelectCard(id)} className={`card ${flipped || founded ? "flipped" : ""}`}>
             <div className="overlay"></div>
@@ -11,7 +10,7 @@ const Card = ({ imageUrl, id, flipped, handleSelectCard, pairID, founded }) => {
     )
 }
 
-Card.propTypes = {
+CardOld.propTypes = {
     imageUrl: PropTypes.string.isRequired,
     flipped: PropTypes.bool.isRequired,
     id: PropTypes.string.isRequired,
@@ -20,5 +19,17 @@ Card.propTypes = {
     founded: PropTypes.bool.isRequired
 }
 
-
-export default Card
+/* {
+    cards.map(({ id, url, flipped, pairID, founded }) => {
+      const cardProps = {
+        id,
+        imageUrl: url,
+        flipped,
+        handleSelectCard,
+        pairID,
+        founded
+      }
+      return <Card key={id} {...cardProps} />
+    })
+  } */
+export default CardOld;

@@ -7,21 +7,21 @@ function StartPage({history}) {
         {
             name: 'Pan comido',
             size: '4x4',
-            cardsPerRowColumn:4,
+            cardsPerRowColumn:12,
             message: 'Esta dificultad es lo mas facil que existe, es como quitarle un dulce a un bebe',
             imgUrl: 'https://media-exp1.licdn.com/dms/image/C560BAQGUAafs66wjYA/company-logo_200_200/0/1519899823694?e=2159024400&v=beta&t=d834c9lZTFOJL-x9fS3Ll-hqeUGJWEliXHN_IS3hTPw'
         },
         {
             name: 'Normalito',
             size: '6x6',
-            cardsPerRowColumn:6,
+            cardsPerRowColumn:24,
             message: 'Esta un poco mas dificil, pero aun es super pasable',
             imgUrl: 'https://media-exp1.licdn.com/dms/image/C560BAQGUAafs66wjYA/company-logo_200_200/0/1519899823694?e=2159024400&v=beta&t=d834c9lZTFOJL-x9fS3Ll-hqeUGJWEliXHN_IS3hTPw'
         },
         {
             name: 'Superhipermega dificil',
             size: '8x8',
-            cardsPerRowColumn:8,
+            cardsPerRowColumn:48,
             message: 'Esto ya es demasiado, quedaras traumado de tanta dificultad. God mode.',
             imgUrl: 'https://media-exp1.licdn.com/dms/image/C560BAQGUAafs66wjYA/company-logo_200_200/0/1519899823694?e=2159024400&v=beta&t=d834c9lZTFOJL-x9fS3Ll-hqeUGJWEliXHN_IS3hTPw'
         }

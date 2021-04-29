@@ -1,17 +1,14 @@
 import React from 'react'
-import { Redirect } from 'react-router'
+import Board from '../components/Board';
 
-
-const MemoPage = ({history}) => {
-    
-    if(history.action !== 'REPLACE'){
-        return <Redirect to='/'/>;
-    }
-    console.log(history.location);
+const MemoPage = ({ history }) => {
+    const { cardsPerRowColumn } = history.location.state;
     return (
-        <div className="board">
-            Memorame
-        </div>
+        <>
+            <Board cardsPerRowColumn={cardsPerRowColumn} >
+            </Board>
+
+        </>
     )
 }
 

@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from 'react';
 import './App.css';
-import Board from "./Board";
-import Card from "./Card";
+import Board from "../components/Board";
+import Card from "../components/Card";
 import Form from "./Form";
 import { v4 as uuid } from "uuid";
 

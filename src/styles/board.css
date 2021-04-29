@@ -1,7 +1,0 @@
-.board {
-	margin: 0px 4em;
-	display: grid;
-	gap: 10px;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 25vh 25vh 25vh;
-}
