@@ -9,9 +9,9 @@ const StartRoutes = () => {
         <>
             <div>
                 <Switch>
-                    <Route exact path="/" component={StartPage} />
-                    <Route exact path="/scores" component={ScoresPage} />
-                    <Redirect to="/" />
+                    <Route exact path="/memo" component={StartPage} />
+                    <Route exact path="/memo/scores" component={ScoresPage} />
+                    <Redirect to="/memo" />
                 </Switch>
             </div>
         </>

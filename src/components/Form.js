@@ -8,11 +8,11 @@ const Form = ({ totalSeconds, cardsPerRowColumn }) => {
         const highScores = JSON.parse(localStorage.getItem("highScores")) || { 12: [], 24: [], 48: [] };
         highScores[cardsPerRowColumn].push({ name, seconds });
         localStorage.setItem("highScores", JSON.stringify(highScores));
-        history.replace("/");
+        history.replace("/memo");
     }
     const comebackStart = (e) => {
         e.preventDefault();
-        history.replace("/");
+        history.replace("/memo");
     }
     const handleTextChange = (e) => {
         setText(e.target.value);

@@ -1,5 +1,5 @@
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Switch,
     Route,
     Redirect
@@ -9,14 +9,15 @@ import StartRoutes from "./StartRoutes";
 
 export default function AppRouter() {
     return (
-        <Router>
+        <BrowserRouter>
             <div>
                 <Switch>
-                    <Route exact path="/memorama" component={({ history }) => history.action !== 'REPLACE' ?
-                        <Redirect to='/' /> : <MemoPage {...{ history }} />} />
+                    <Route exact path="/memo/memorama" component={({ history }) => history.action !== 'REPLACE' ?
+                        <Redirect to='/memo' /> : <MemoPage {...{ history }} />} />
                     <Route path="/" component={StartRoutes} />
                 </Switch>
             </div>
-        </Router>
+        </BrowserRouter >
+
     )
 }

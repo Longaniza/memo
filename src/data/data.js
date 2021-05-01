@@ -22,7 +22,6 @@ export const urls = ["https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,wi
     "https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,width=90,quality=85,format=webp/images/cards/source/gangplank.png",
     "https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,width=90,quality=85,format=webp/images/cards/source/leveled-braum.png",
     "https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,width=90,quality=85,format=webp/images/cards/source/nimble-poro.png"
-
 ]
 
 export const responsiveRows = {

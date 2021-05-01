@@ -48,13 +48,13 @@ function StartPage({ history }) {
             })
         }
         <div className="text-align-left">
-            <i style={{ fontSize: "2rem" }} className="fas fa-angle-right" onClick={() => {
-                history.replace("/memorama", { cardsPerRowColumn: selected });
-            }}></i>
+                <i style={{ fontSize: "2rem" }} className="fas fa-angle-right" onClick={() => {
+                    history.replace("/memo/memorama",{cardsPerRowColumn:selected});
+                }}></i>
         </div>
         <div className="tooltip" style={{ textAlign: "center", marginTop: "50px" }}>
             <Link
-                to="/scores"
+                to="/memo/scores"
             >
                 <i style={{ fontSize: "2rem" }} className="fas fa-stopwatch"></i>
             </Link>

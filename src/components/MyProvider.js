@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import MyContext from './MyContext';
 
 const MyProvider = props => {
-
   return (
     <MyContext.Provider
       value={{
