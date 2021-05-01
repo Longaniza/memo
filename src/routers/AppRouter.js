@@ -12,12 +12,11 @@ export default function AppRouter() {
         <Router>
             <div>
                 <Switch>
-                    <Route exact path="/memorama" component={({history}) => history.action !== 'REPLACE' ? 
-                                                            <Redirect to='/'/> : <MemoPage {...{history}} /> }  />
+                    <Route exact path="/memorama" component={({ history }) => history.action !== 'REPLACE' ?
+                        <Redirect to='/' /> : <MemoPage {...{ history }} />} />
                     <Route path="/" component={StartRoutes} />
                 </Switch>
             </div>
         </Router>
-
     )
 }
