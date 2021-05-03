@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import PropTypes from 'prop-types';
+
+//Componente que representa la forma que aprece al ganar el juego
 const Form = ({ totalSeconds, cardsPerRowColumn }) => {
     const history = useHistory();
     const [text, setText] = useState('');

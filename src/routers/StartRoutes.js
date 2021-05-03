@@ -5,6 +5,8 @@ import StartPage from '../pages/StartPage';
 
 
 const StartRoutes = () => {
+    /* Se hace la busqueda de las paginas disponibles. Si no coincide con ninguna se redireccion al menu
+    principal */
     return (
         <>
             <div>

@@ -5,6 +5,7 @@ import { urls, responsiveRows } from '../data/data';
 import Form from './Form';
 import PropTypes from 'prop-types';
 
+//Componente que representa el tablero
 const Board = ({ cardsPerRowColumn, context, totalSeconds }) => {
     const [cards, setCards] = useState([]);
     const [selectedCard, setSelectedCard] = useState({});

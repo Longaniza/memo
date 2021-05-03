@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/card.css";
 import PropTypes from "prop-types";
-
+//Componente que representa cada una de las cartas
 const Card = ({ imageUrl, id, cardFound, clickCard, availableToPick }) => {
     return (
         <div className="scene">

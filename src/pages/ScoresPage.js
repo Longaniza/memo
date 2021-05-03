@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 
+//Componente que representa la pagina de puntajes ordenados de menor a mayor segun el tiempo 
 const ScoresPage = () => {
     const highScores = JSON.parse(localStorage.getItem("highScores")) || { 12: [], 24: [], 48: [] };
     for (const cards in highScores) {

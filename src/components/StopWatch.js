@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+
+//Componente que representa el cronometro que aparece al jugar al memorama
 const Stoptwatch = ({ cardsPerRowColumn, context, setTotalSeconds }) => {
   const [seconds, setSeconds] = useState(-7);
   useEffect(() => {

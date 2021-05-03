@@ -1,3 +1,4 @@
+//Arreglo con los urls de las imagenes colocadas en la cartas del memorama
 export const urls = ["https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,width=90,quality=70,format=webp/images/cards/source/leblanc.png",
     "https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,width=90,quality=70,format=webp/images/cards/source/leveled-katarina.png",
     "https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,width=90,quality=70,format=webp/images/cards/source/leveled-aphelios.png",
@@ -23,7 +24,8 @@ export const urls = ["https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,wi
     "https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,width=90,quality=85,format=webp/images/cards/source/leveled-braum.png",
     "https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,width=90,quality=85,format=webp/images/cards/source/nimble-poro.png"
 ]
-
+//Objeto utilizado para hacer renderado en base a columnas en el memorama(se utiliza como props con ayuda de
+// de material UI .Esta cantidad depende de la cantidad de cartas necesarias y el tamanio del display
 export const responsiveRows = {
     12: { xs: 6, sm: 3 },
     24: { xs: 6, sm: 2 },
