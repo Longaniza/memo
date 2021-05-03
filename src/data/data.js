@@ -1,3 +1,28 @@
+//Arreglo de dificultades que es renderizado en el menu principal
+export const difficulties = [
+    {
+        name: 'Pan comido',
+        size: '12 cartas',
+        cardsPerRowColumn: 12,
+        message: 'Esta dificultad es lo mas facil que existe, es como quitarle un dulce a un bebe',
+        imgUrl: 'https://media-exp1.licdn.com/dms/image/C560BAQGUAafs66wjYA/company-logo_200_200/0/1519899823694?e=2159024400&v=beta&t=d834c9lZTFOJL-x9fS3Ll-hqeUGJWEliXHN_IS3hTPw'
+    },
+    {
+        name: 'Normalito',
+        size: '24 cartas',
+        cardsPerRowColumn: 24,
+        message: 'Esta un poco mas dificil, pero aun es super pasable',
+        imgUrl: 'https://media-exp1.licdn.com/dms/image/C560BAQGUAafs66wjYA/company-logo_200_200/0/1519899823694?e=2159024400&v=beta&t=d834c9lZTFOJL-x9fS3Ll-hqeUGJWEliXHN_IS3hTPw'
+    },
+    {
+        name: 'Superhipermega dificil',
+        size: '48 cartas',
+        cardsPerRowColumn: 48,
+        message: 'Esto ya es demasiado, quedaras traumado de tanta dificultad. God mode.',
+        imgUrl: 'https://media-exp1.licdn.com/dms/image/C560BAQGUAafs66wjYA/company-logo_200_200/0/1519899823694?e=2159024400&v=beta&t=d834c9lZTFOJL-x9fS3Ll-hqeUGJWEliXHN_IS3hTPw'
+    }
+];
+
 //Arreglo con los urls de las imagenes colocadas en la cartas del memorama
 export const urls = ["https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,width=90,quality=70,format=webp/images/cards/source/leblanc.png",
     "https://www.runeterrafire.com/cdn-cgi/image/sharpen=1.0,width=90,quality=70,format=webp/images/cards/source/leveled-katarina.png",

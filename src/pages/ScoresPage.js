@@ -2,6 +2,7 @@ import React from 'react';
 
 //Componente que representa la pagina de puntajes ordenados de menor a mayor segun el tiempo 
 const ScoresPage = () => {
+    //Obtencion de los tiempos y ordenamiento de estos por categoria
     const highScores = JSON.parse(localStorage.getItem("highScores")) || { 12: [], 24: [], 48: [] };
     for (const cards in highScores) {
         highScores[cards].sort(function (a, b) { return a.seconds - b.seconds });

@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 const Form = ({ totalSeconds, cardsPerRowColumn }) => {
     const history = useHistory();
     const [text, setText] = useState('');
+    //Funcion utilizada para guardar el tiempo obtenido en cache
     const saveTime = ({ name, seconds }) => {
         const highScores = JSON.parse(localStorage.getItem("highScores")) || { 12: [], 24: [], 48: [] };
         highScores[cardsPerRowColumn].push({ name, seconds });
@@ -27,7 +28,6 @@ const Form = ({ totalSeconds, cardsPerRowColumn }) => {
             <input onChange={handleTextChange} value={text}></input>
             <button onClick={() => { saveTime({ name: text, seconds: totalSeconds }) }}>Guadar tiempo y regresar al menu principal</button>
             <button onClick={comebackStart}>Regresar al menu principal</button>
-
         </div>
     )
 }

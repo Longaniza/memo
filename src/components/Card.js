@@ -7,7 +7,7 @@ const Card = ({ imageUrl, id, cardFound, clickCard, availableToPick }) => {
         <div className="scene">
             <div onClick={() => { clickCard(id) }} className={`card ${cardFound ? '' : 'is-flipped'} ${availableToPick ? '' : 'notavailabletopick'} `}>
                 <div className="card__face card__face--front">
-                    <img src={imageUrl} alt="" />
+                    <img src={imageUrl} alt="Card" />
                 </div>
                 <div className="card__face card__face--back"></div>
             </div>
