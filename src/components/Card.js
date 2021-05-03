@@ -18,6 +18,9 @@ const Card = ({ imageUrl, id, cardFound, clickCard, availableToPick }) => {
 Card.propTypes = {
     imageUrl: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
+    cardFound: PropTypes.bool.isRequired,
+    clickCard: PropTypes.func.isRequired,
+    availableToPick: PropTypes.bool.isRequired
 }
 
 export default Card;

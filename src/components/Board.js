@@ -3,6 +3,7 @@ import Card from '../components/Card';
 import Grid from '@material-ui/core/Grid';
 import { urls, responsiveRows } from '../data/data';
 import Form from './Form';
+import PropTypes from 'prop-types';
 
 const Board = ({ cardsPerRowColumn, context, totalSeconds }) => {
     const [cards, setCards] = useState([]);
@@ -85,4 +86,9 @@ const Board = ({ cardsPerRowColumn, context, totalSeconds }) => {
     )
 }
 
+Board.propTypes = {
+    context: PropTypes.object.isRequired,
+    totalSeconds: PropTypes.number.isRequired,
+    cardsPerRowColumn: PropTypes.number.isRequired,
+}
 export default Board;

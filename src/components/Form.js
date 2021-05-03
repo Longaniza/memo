@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
+import PropTypes from 'prop-types';
 const Form = ({ totalSeconds, cardsPerRowColumn }) => {
     const history = useHistory();
     const [text, setText] = useState('');
@@ -27,5 +28,10 @@ const Form = ({ totalSeconds, cardsPerRowColumn }) => {
 
         </div>
     )
+}
+
+Form.propTypes = {
+    totalSeconds: PropTypes.number.isRequired,
+    cardsPerRowColumn: PropTypes.number.isRequired
 }
 export default Form;

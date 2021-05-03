@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 const Stoptwatch = ({ cardsPerRowColumn, context, setTotalSeconds }) => {
   const [seconds, setSeconds] = useState(-7);
   useEffect(() => {
@@ -17,6 +18,12 @@ const Stoptwatch = ({ cardsPerRowColumn, context, setTotalSeconds }) => {
       <h1>{seconds}</h1>
     </>
   )
+}
+
+Stoptwatch.propTypes = {
+  cardsPerRowColumn: PropTypes.number.isRequired,
+  context: PropTypes.object.isRequired,
+  setTotalSeconds: PropTypes.func.isRequired
 }
 
 export default Stoptwatch;
