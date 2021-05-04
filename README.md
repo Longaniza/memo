@@ -12,10 +12,11 @@ Para ello, se utilizo Trello como principal herramienta. Se crearon 3 campos don
 general, las que se estaban realizando y las ya finalizadas.
 
 ## Organización del código
+El codigo consiste principalmente en la representacion de los componentes con React y los estilos de CSS. Dentro de los estilos se tiene el archivo de los estilos del componente Card, ya que este es el componente
+que mayor modifaciones tiene de CSS. Los demas estilos se encuentran dentro del archivo index.css. En cuanto a los componentes se encuentran todos ordenados dentro de distintas carpetas para un mayor entenimiento de estos mismos. Se dividieron en components, pages y routers. Ademas de todo lo ya mencionado, existe un archivo data, donde se encuentran datos utilizados por la aplicacion. 
 
 ![]()
 
-![]()
 
 ## Setup de forma local
 Se utilizo create-react-app para hacer el setup de la aplicacion de react.
