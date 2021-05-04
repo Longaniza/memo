@@ -11,7 +11,7 @@ const ScoresPage = () => {
         <div>
             <h1 className="titulo"><strong>Mejores tiempos</strong></h1>
             <br></br>
-            <div class="container"><div class="row">
+            <div className="container"><div>
             {
                 Object.entries(highScores).map(([totalCards, registries], index) => {
                     return <div style={{textAlign:"center"}}  key={index}>
