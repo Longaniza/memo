@@ -15,7 +15,7 @@ function StartPage({ history }) {
                     </div>
                     <div>
                         <h1>{elem.name}</h1>
-                        <h1>{elem.size}</h1>
+                        <h1 className="size" >{elem.size}</h1>
 
                         <div className="text-align-left tooltip">
                             <i style={{ color: "#48466d" }} className="fas fa-question-circle"></i>
@@ -25,10 +25,13 @@ function StartPage({ history }) {
                 </div>);
             })
         }
-        <div className="text-align-left">
-                <i style={{ fontSize: "2rem" }} className="fas fa-angle-right" onClick={() => {
+        <div className="text-align-left tooltip">
+                <img alt="Imagen de coton de inicio" src="https://bit.ly/3uhzN2Y" onClick={() => {
                     history.replace("/memo/memorama",{cardsPerRowColumn:selected});
-                }}></i>
+                }}></img>
+                <div className="tooltiptext bottom">
+                <span>Presiona para iniciar el juego</span>
+            </div>
         </div>
         <div className="tooltip" style={{ textAlign: "center", marginTop: "50px" }}>
             <Link
