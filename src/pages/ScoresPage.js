@@ -14,7 +14,7 @@ const ScoresPage = () => {
             <div class="container"><div class="row">
             {
                 Object.entries(highScores).map(([totalCards, registries], index) => {
-                    return <div class="col-sm-4" key={index}>
+                    return <div style={{textAlign:"center"}}  key={index}>
                         <img
                     src="https://bit.ly/3vCDa4K"
                     alt="Score winner" width="140" height="140"></img>
