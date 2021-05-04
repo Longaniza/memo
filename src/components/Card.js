@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const Card = ({ imageUrl, id, cardFound, clickCard, availableToPick }) => {
     return (
         <div className="scene">
-            <div onClick={() => { clickCard(id) }} className={`card ${cardFound ? '' : 'is-flipped'} ${availableToPick ? '' : 'notavailabletopick'} `}>
+            <div onClick={() => { clickCard(id) }} className={`card ${cardFound ? '' : 'is-flipped'} ${availableToPick ? '' : 'notavailabletopick'} change-cursor`}>
                 <div className="card__face card__face--front">
                     <img src={imageUrl} alt="Card" />
                 </div>

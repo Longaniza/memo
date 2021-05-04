@@ -8,7 +8,7 @@ function StartPage({ history }) {
     return (<div className="difficulties">
         {
             difficulties.map((elem, index) => {
-                return (<div key={index} className={`${selected === elem.cardsPerRowColumn ? 'selected' : ''} animate__animated animate__slideInLeft `} style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }} onClick={(e) => { setSelected(elem.cardsPerRowColumn) }}>
+                return (<div key={index} className={`${selected === elem.cardsPerRowColumn ? 'selected' : ''} animate__animated animate__slideInLeft change-cursor difficulty`} onClick={(e) => { setSelected(elem.cardsPerRowColumn) }}>
 
                     <div>
                         <img style={{ height: "20vh", width: "20vh" }} src={elem.imgUrl} alt="cardimg"></img>
@@ -17,7 +17,7 @@ function StartPage({ history }) {
                         <h1>{elem.name}</h1>
                         <h1 className="size" >{elem.size}</h1>
 
-                        <div className="text-align-left tooltip">
+                        <div className="text-align-right tooltip">
                             <i style={{ color: "#48466d" }} className="fas fa-question-circle"></i>
                             <span className="tooltiptext">{elem.message}</span>
                         </div>
@@ -25,15 +25,15 @@ function StartPage({ history }) {
                 </div>);
             })
         }
-        <div className="text-align-left tooltip">
-                <img alt="Imagen de coton de inicio" src="https://bit.ly/3uhzN2Y" onClick={() => {
+        <div className="text-align-right tooltip">
+                <img className="change-cursor" alt="Imagen de boton de inicio" src="https://bit.ly/3uhzN2Y" onClick={() => {
                     history.replace("/memo/memorama",{cardsPerRowColumn:selected});
                 }}></img>
                 <div className="tooltiptext bottom">
                 <span>Presiona para iniciar el juego</span>
             </div>
         </div>
-        <div className="tooltip" style={{ textAlign: "center", marginTop: "50px" }}>
+        <div id="scores-initial-menu" className="tooltip">
             <Link
                 to="/memo/scores"
             >
@@ -43,14 +43,12 @@ function StartPage({ history }) {
             <div className="tooltiptext bottom">
                 <span>Mejores tiempos</span>
             </div>
-
         </div>
     </div>);
 }
 
 StartPage.propTypes = {
     history: PropTypes.object.isRequired
-
 }
 
 
