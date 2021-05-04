@@ -9,16 +9,23 @@ const ScoresPage = () => {
     }
     return (
         <div>
+            <h1 className="titulo"><strong>Mejores tiempos</strong></h1>
+            <br></br>
+            <div class="container"><div class="row">
             {
                 Object.entries(highScores).map(([totalCards, registries], index) => {
-                    return <div key={index}>
-                        <h1>{totalCards} cartas</h1>
+                    return <div class="col-sm-4" key={index}>
+                        <img
+                    src="https://bit.ly/3vCDa4K"
+                    alt="Score winner" width="140" height="140"></img>
+                        <h1 className="scores"><b>{totalCards} cartas</b></h1>
                         {registries.length ? registries.map(({ name, seconds }, index) => {
-                            return <h1 key={index}>{`${name}   ${seconds}s`}</h1>
+                            return <h1 className="scores" key={index}>{`${name}   ${seconds}s`}</h1>
                         }) : <h1>N/A</h1>}
                     </div>;
                 })
             }
+            </div></div>
         </div>
     )
 }

@@ -71,6 +71,7 @@ body {
   font-size: 1rem;
 }
 .modal{
+  height: auto;
   position: absolute;
   top: 30%;
   left: 20%;
@@ -79,7 +80,7 @@ body {
  .modal-content{
  background-color: #fefefe;
  margin: auto;
- padding: 0;
+ padding: 1rem;
  border: 1px solid #888;
  width: 60%;
  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
@@ -91,4 +92,12 @@ code {
 }
 .size {
   text-align: right;
+}
+.titulo{
+  font-family:Monaco;
+  color: #3d84a8;
+  text-align: center;
+}
+.scores{
+  text-align: center;
 }

@@ -21,13 +21,16 @@ const Form = ({ totalSeconds, cardsPerRowColumn }) => {
         setText(e.target.value);
     }
     return (
-        <div className={`${totalSeconds ? 'wingame animate__animated animate__backInDown' : 'normalgame'} modal modal-content`}>
-            <h1>Has encontrado todas las cartas!!!</h1>
-            <h1>Terminaste en {totalSeconds}s</h1>
-            <h1>Quieres guardar tu tiempo en los mejores tiempos?</h1>
-            <input onChange={handleTextChange} value={text}></input>
-            <button onClick={() => { saveTime({ name: text, seconds: totalSeconds }) }}>Guadar tiempo y regresar al menu principal</button>
-            <button onClick={comebackStart}>Regresar al menu principal</button>
+        <div className={`${totalSeconds ? 'wingame animate__animated animate__backInDown' : 'normalgame'} modal modal-content container`}>
+            <h1 className="titulo">Has encontrado todas las cartas!!!</h1>
+            <h1 className="titulo">Terminaste en {totalSeconds}s</h1>
+            <h1 className="titulo" >Quieres guardar tu tiempo en los mejores tiempos?</h1>
+            <br></br>
+            <input onChange={handleTextChange} value={text} placeholder="Ingresa tu nombre"></input>
+            <br></br>
+            <button className="btn btn-primary" onClick={() => { saveTime({ name: text, seconds: totalSeconds }) }}>Guadar tiempo y regresar al menu principal</button>
+            <br></br>
+            <button className="btn btn-outline-primary" onClick={comebackStart}>Regresar al menu principal</button>
         </div>
     )
 }
