@@ -18,7 +18,7 @@ que mayor modifaciones tiene de CSS. Los demas estilos se encuentran dentro del 
 ## Setup de forma local
 Se utilizo create-react-app para hacer el setup de la aplicacion de react.
 
-## Setup pagina hostead
+## Setup pagina hosteada
 Se utilizo heroku para hostear la app y que fuera disponible para todos.
 
 ## Web App finalizada
